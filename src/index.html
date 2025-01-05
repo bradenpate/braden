@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
+</head>
+<body>
+    <header class="font-ivy">
+      <div id="navbar"></div>
+      <script>
+        fetch("/src/navbar.html")
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById("navbar").innerHTML = html;
+      
+            // Run navigation.js logic here
+            const currentPath = window.location.pathname.replace(/\/$/, "");
+            const navLinks = document.querySelectorAll(".nav-link");
+      
+            navLinks.forEach((link) => {
+              const linkPath = link.getAttribute("href").replace(/\/$/, "");
+              if (link.id !== "sayHello" && linkPath === currentPath) {
+                link.classList.add("text-blue-950");
+                link.classList.remove("text-slate-400");
+              } else {
+                link.classList.add("text-slate-400");
+                link.classList.remove("text-blue-950");
+              }
+            });
+          })
+          .catch((err) => console.error("Error loading navbar:", err));
+      </script>
+      </header>
+    <div class="mx-auto p-8">
+    <p class="font-ivy font-black text-5xl sm:text-7xl text-slate-400 animate-fadeIn pb-24">I’m Braden Pate a senior design and brand manager based in Boston. I’m currently leading brand creative 
+        at Mendix.</p>
+        <div class="flex items-end"><img class="pr-4 w-10" src="/images/arrow-down.svg"><div class="font-ivy text-slate-900 text-2xl leading-none"><strong>Explore my work</strong></div></div>
+</div>
+
+<div class="font-ivy mx-auto p-8 sm:grid sm:grid-cols-2 sm:gap-8 auto-rows-min">
+  <div class="col-span-2 auto-rows-max">
+    <a href="/src/work/mendix-ai.html"><video autoplay muted loop class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll">
+      <source src="/images/work/mendix-ai/mendix-ai-promo.mp4" type="video/mp4" />
+    </video></a> 
+    <p class="pb-24 text-xl max-w-3xl font-bold text-slate-500"><span class="text-slate-950">Highlighting the transformative power of AI at Mendix through brand and digital design.</span> Leading the creative direction to showcase innovation at a top low-code app development company.</p>
+  </div>
+ <div class="row-start-2">
+  <a href="/src/work/mendix-refresh.html"><video autoplay muted loop class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll">
+    <source src="/images/work/mendix-refresh/mendix-logo-reveal-clip.mp4" type="video/mp4" />
+  </video></a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">Navigated a brand refresh for Mendix that included a refreshed mark and new messaging.</span> Maturing our stance from a startup to a reliable platform owned by Siemens.</p></div>
+  <div class="row-start-2"> <a href="/src/work/mendix-cko25.html"><img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="/images/work/mendix-cko25/thumbnail.png"></img>
+  </a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">Directed the creative vision for our annual company kickoff at Mendix,</span> engaging employees with a compelling theme focused on leveling up and driving growth.</p></div>
+  <div class="row-start-3"><a href="/src/work/ef.html"><img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="/images/work/ef/thumbnail.png"></img></a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">Led the web and marketing design efforts for EF Ultimate Break,</span> creating a modernized brand and booking experience that captured the spirit of young travelers while supporting the company’s growth.</p></div>
+  <div class="row-start-3"><a href="/src/work/wedding.html"><img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="/images/work/wedding/thumbnail.png"></img></a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">Designed my wedding invitation suite,</span> combining the elegance of sumi ink typography with thoughtful design details to reflect the joy and spirit of the celebration.</p></div>
+  <div class="row-start-4"><a href="/src/work/makeshift.html"><img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="/images/work/makeshift/thumbnail.png"></img></a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">A branded podcast for Mendix, spotlighting the makers driving innovation with low-code technology</span> and the transformative impact they create within their companies.</p></div>
+  <div class="row-start-4"> <a href="/src/work/agile.html"><img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="/images/work/agile/thumbnail.png"></img></a>
+    <p class="pb-24 text-xl font-bold text-slate-500"><span class="text-slate-950">A campaign and eBook showcasing how Mendix accelerates Agile Development,</span> driving progress from ‘Do’ to ‘Done’ with unparalleled efficiency and innovation.</p></div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch("/src/footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
+<script src="/script.js?v=1.0"></script>
+</body>
+</html>
+
+

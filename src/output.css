@@ -805,6 +805,10 @@ video {
   background-image: url('/images/bradenpate.svg');
 }
 
+.bg-\[url\(\'\.\/images\/bradenpate\.svg\'\)\] {
+  background-image: url('./images/bradenpate.svg');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -968,6 +972,10 @@ video {
 
 .hover\:bg-\[url\(\'\/images\/bradenpate\.svg\'\)\]:hover {
   background-image: url('/images/bradenpate.svg');
+}
+
+.hover\:bg-\[url\(\'\.\/images\/bradenpate\.svg\'\)\]:hover {
+  background-image: url('./images/bradenpate.svg');
 }
 
 .hover\:text-blue-950:hover {

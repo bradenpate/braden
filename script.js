@@ -75,4 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Failed to load next-project.html:", error));
   }
+  
 });

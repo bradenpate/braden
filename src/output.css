@@ -734,15 +734,15 @@ video {
   flex-grow: 1;
 }
 
-.scale-90 {
-  --tw-scale-x: .9;
-  --tw-scale-y: .9;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-90 {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -839,10 +839,6 @@ video {
 .bg-sky-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[url\(\'\/images\/bradenpate\.svg\'\)\] {
-  background-image: url('/images/bradenpate.svg');
 }
 
 .bg-\[url\(\'\.\/images\/bradenpate\.svg\'\)\] {
@@ -1014,10 +1010,6 @@ video {
 
 /* Add custom styles below */
 
-.hover\:bg-\[url\(\'\/images\/bradenpate\.svg\'\)\]:hover {
-  background-image: url('/images/bradenpate.svg');
-}
-
 .hover\:bg-\[url\(\'\.\/images\/bradenpate\.svg\'\)\]:hover {
   background-image: url('./images/bradenpate.svg');
 }
@@ -1067,45 +1059,6 @@ video {
 
   .sm\:items-end {
     align-items: flex-end;
-  }
-
-  .sm\:justify-end {
-    justify-content: flex-end;
-  }
-
-  .sm\:gap-14 {
-    gap: 3.5rem;
-  }
-
-  .sm\:gap-8 {
-    gap: 2rem;
-  }
-
-  .sm\:gap-x-32 {
-    -moz-column-gap: 8rem;
-         column-gap: 8rem;
-  }
-
-  .sm\:pb-0 {
-    padding-bottom: 0px;
-  }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:mb-0 {
-    margin-bottom: 0px;
-  }
-}n-items: flex-end;
   }
 
   .sm\:justify-end {

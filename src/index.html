@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
 </head>
 <body>
     <header class="font-ivy">
       <div id="navbar"></div>
       <script>
-        fetch("./src/navbar.html")
-          .then((response) => response.text())
-          .then((html) => {
-            document.getElementById("navbar").innerHTML = html;
+fetch("./navbar.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("navbar").innerHTML = html;
 
-            // Run navigation.js logic here
-            const currentPath = window.location.pathname.replace(/\/$/, "");
-            const navLinks = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize the current path
+    const navLinks = document.querySelectorAll(".nav-link");
 
-            navLinks.forEach((link) => {
-              const linkPath = link.getAttribute("href").replace(/\/$/, "");
-              if (link.id !== "sayHello" && linkPath === currentPath) {
-                link.classList.add("text-blue-950");
-                link.classList.remove("text-slate-400");
-              } else {
-                link.classList.add("text-slate-400");
-                link.classList.remove("text-blue-950");
-              }
-            });
-          })
-          .catch((err) => console.error("Error loading navbar:", err));
+    navLinks.forEach((link) => {
+      // Resolve relative href to absolute path
+      const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname.replace(/\/$/, "");
+
+      // Compare resolved link path with the current path
+      if (link.id !== "sayHello" && linkPath === currentPath) {
+        link.classList.add("text-blue-950");
+        link.classList.remove("text-slate-400");
+      } else {
+        link.classList.add("text-slate-400");
+        link.classList.remove("text-blue-950");
+      }
+    });
+  })
+  .catch((err) => console.error("Error loading navbar:", err));
       </script>
     </header>
     <div class="mx-auto p-8">
@@ -48,7 +50,7 @@
 
     <div class="font-ivy mx-auto p-8 sm:grid sm:grid-cols-2 sm:gap-8 auto-rows-min">
       <div class="col-span-2 auto-rows-max">
-        <a href="./src/work/mendix-ai.html">
+        <a href="./work/mendix-ai.html">
           <video autoplay muted loop class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll">
             <source src="./images/work/mendix-ai/mendix-ai-promo.mp4" type="video/mp4" />
           </video>
@@ -59,7 +61,7 @@
         </p>
       </div>
       <div class="row-start-2">
-        <a href="./src/work/mendix-refresh.html">
+        <a href="./work/mendix-refresh.html">
           <video autoplay muted loop class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll">
             <source src="./images/work/mendix-refresh/mendix-logo-reveal-clip.mp4" type="video/mp4" />
           </video>
@@ -70,7 +72,7 @@
         </p>
       </div>
       <div class="row-start-2">
-        <a href="./src/work/mendix-cko25.html">
+        <a href="./work/mendix-cko25.html">
           <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/mendix-cko25/thumbnail.png" alt="Mendix CKO 25">
         </a>
         <p class="pb-24 text-xl font-bold text-slate-500">
@@ -78,7 +80,7 @@
         </p>
       </div>
       <div class="row-start-3">
-        <a href="./src/work/ef.html">
+        <a href="./work/ef.html">
           <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/ef/thumbnail.png" alt="EF">
         </a>
         <p class="pb-24 text-xl font-bold text-slate-500">
@@ -86,7 +88,7 @@
         </p>
       </div>
       <div class="row-start-3">
-        <a href="./src/work/wedding.html">
+        <a href="./work/wedding.html">
           <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/thumbnail.png" alt="Wedding">
         </a>
         <p class="pb-24 text-xl font-bold text-slate-500">
@@ -94,7 +96,7 @@
         </p>
       </div>
       <div class="row-start-4">
-        <a href="./src/work/makeshift.html">
+        <a href="./work/makeshift.html">
           <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/makeshift/thumbnail.png" alt="Makeshift">
         </a>
         <p class="pb-24 text-xl font-bold text-slate-500">
@@ -102,7 +104,7 @@
         </p>
       </div>
       <div class="row-start-4">
-        <a href="./src/work/agile.html">
+        <a href="./work/agile.html">
           <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/agile/thumbnail.png" alt="Agile">
         </a>
         <p class="pb-24 text-xl font-bold text-slate-500">
@@ -112,13 +114,12 @@
     </div>
     <div id="footer"></div>
     <script>
-      fetch("./src/footer.html")
+      fetch("./footer.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("footer").innerHTML = html;
         });
     </script>
-    <script src="./src/script.js?v=1.0"></script>
-    <script src="./src/navigation.js"></script>
+    <script src="./script.js?v=1.0"></script>
 </body>
 </html>

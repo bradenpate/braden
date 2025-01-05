@@ -1,41 +1,42 @@
 <!doctype html>
 <html>
 <head>
-<base href="/my-website/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/src/output.css" rel="stylesheet">
+  <link href="../output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
 </head>
 <body >
     <header class="text-gray-600 font-ivy mix-blend-multiply">
       <div id="navbar"></div>
       <script>
-        fetch("./src/navbar.html")
-          .then((response) => response.text())
-          .then((html) => {
-            document.getElementById("navbar").innerHTML = html;
-      
-            // Run navigation.js logic here
-            const currentPath = window.location.pathname.replace(/\/$/, "");
-            const navLinks = document.querySelectorAll(".nav-link");
-      
-            navLinks.forEach((link) => {
-              const linkPath = link.getAttribute("href").replace(/\/$/, "");
-              if (link.id !== "sayHello" && linkPath === currentPath) {
-                link.classList.add("text-blue-950");
-                link.classList.remove("text-slate-400");
-              } else {
-                link.classList.add("text-slate-400");
-                link.classList.remove("text-blue-950");
-              }
-            });
-          })
-          .catch((err) => console.error("Error loading navbar:", err));
+  fetch("../navbar.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("navbar").innerHTML = html;
+
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize the current path
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      // Resolve relative href to absolute path
+      const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname.replace(/\/$/, "");
+
+      // Compare resolved link path with the current path
+      if (link.id !== "sayHello" && linkPath === currentPath) {
+        link.classList.add("text-blue-950");
+        link.classList.remove("text-slate-400");
+      } else {
+        link.classList.add("text-slate-400");
+        link.classList.remove("text-blue-950");
+      }
+    });
+  })
+  .catch((err) => console.error("Error loading navbar:", err));
       </script>
       </header>
 <div class="flex p-8 animate-fadeIn">
-  <div class="max-w-16"><img src="./images/work/wedding/client.svg"></img></div>
+  <div class="max-w-16"><img src="../images/work/wedding/client.svg"></img></div>
   <div class="grid-rows-2 pl-4"><p id="work-title" class="text-2xl font-bold text-slate-800 font-ivy">Ike & Bray</p><p id="work-subtitle" class="font-ivy text-2xl font-bold text-slate-400">Wedding Package</p></div>
 </div>
     <div class="mx-auto p-8 animate-fadeIn">
@@ -43,23 +44,23 @@
     </p>
 </div>
 <div class="mx-auto p-8 sm:grid sm:grid-cols-2 sm:gap-8 auto-rows-min">
-  <div class="row-start-1 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-01.png"></img></div>
-  <div class="row-start-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-02.png"></img></div>
-  <div class="row-start-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-03.png"></img></div>
-  <div class="row-start-3 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-04.png"></img></div>
-  <div class="row-start-4 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-05.png"></img></div>
-  <div class="row-start-5 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/work/wedding/image-06.png"></img></div>
+  <div class="row-start-1 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-01.png"></img></div>
+  <div class="row-start-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-02.png"></img></div>
+  <div class="row-start-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-03.png"></img></div>
+  <div class="row-start-3 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-04.png"></img></div>
+  <div class="row-start-4 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-05.png"></img></div>
+  <div class="row-start-5 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/wedding/image-06.png"></img></div>
 </div>
 <div id="next-project-placeholder"></div>
 <div id="footer"></div>
 <script>
-  fetch("/src/footer.html")
+  fetch("../footer.html")
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("footer").innerHTML = html;
     });
 </script>
-<script src="/script.js?v=1.0"></script>
-<script src="/navigation.js"></script>
+<script src="../script.js?v=1.0"></script>
+<script src="../navigation.js"></script>
 </body>
 </html>

@@ -1,23 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Highlight Navigation Links
-  const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize path
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  if (navLinks.length === 0) {
-    console.error("No nav links found. Ensure navbar.html is loaded first.");
-  }
-
-  navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (link.id !== "sayHello" && linkPath === currentPath) {
-      link.classList.add("text-blue-950");
-      link.classList.remove("text-slate-400");
-    } else {
-      link.classList.add("text-slate-400");
-      link.classList.remove("text-blue-950");
-    }
-  });
-
   // Animate on Scroll
   const elements = document.querySelectorAll(".animate-on-scroll");
   const observer = new IntersectionObserver(
@@ -39,16 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (sayHelloLink) {
     sayHelloLink.addEventListener("click", () => {
       const email = "braden@bradenpate.com";
-      navigator.clipboard.writeText(email)
-        .then(() => {
-          sayHelloLink.textContent = "Email copied";
-          setTimeout(() => {
-            sayHelloLink.textContent = "Say hello";
-          }, 2000);
-        })
-        .catch((err) => {
-          console.error("Failed to copy email: ", err);
-        });
+      navigator.clipboard.writeText(email).then(() => {
+        sayHelloLink.textContent = "Email copied";
+        setTimeout(() => {
+          sayHelloLink.textContent = "Say hello";
+        }, 2000);
+      }).catch((err) => {
+        console.error("Failed to copy email: ", err);
+      });
     });
   }
 
@@ -63,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "wedding.html",
   ];
 
-  const currentProject = window.location.pathname.split("/").pop();
-  const currentIndex = projects.indexOf(currentProject);
+  const currentPath = window.location.pathname.split("/").pop();
+  const currentIndex = projects.indexOf(currentPath);
 
   // Proceed only if a placeholder is present and the current project is valid
   const placeholder = document.getElementById("next-project-placeholder");
@@ -74,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectTitle = nextProject.replace(".html", "");
 
     // Fetch the HTML template
-    fetch("../next-project.html")
+    fetch("./next-project.html")
       .then((response) => response.text())
       .then((template) => {
         // Create a temporary element to parse the template
@@ -86,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const thumbnail = container.querySelector("#next-project-thumbnail");
         const link = container.querySelector("#next-project-link");
 
-        thumbnail.src = `../images/work/${projectTitle}/thumbnail.png`;
+        thumbnail.src = `/images/work/${projectTitle}/thumbnail.png`;
         thumbnail.alt = `${projectTitle} Thumbnail`;
-        link.href = `../work/${nextProject}`;
+        link.href = `./work/${nextProject}`;
         link.textContent = `Next Project →`;
 
         // Append the updated template to the placeholder
@@ -96,4 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Failed to load next-project.html:", error));
   }
+  
 });

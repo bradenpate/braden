@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-<base href="/my-website/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -11,27 +10,29 @@
     <header class="text-gray-600 font-ivy">
       <div class="mix-blend-multiply" id="navbar"></div>
       <script>
-        fetch("./src/navbar.html")
-          .then((response) => response.text())
-          .then((html) => {
-            document.getElementById("navbar").innerHTML = html;
-      
-            // Run navigation.js logic here
-            const currentPath = window.location.pathname.replace(/\/$/, "");
-            const navLinks = document.querySelectorAll(".nav-link");
-      
-            navLinks.forEach((link) => {
-              const linkPath = link.getAttribute("href").replace(/\/$/, "");
-              if (link.id !== "sayHello" && linkPath === currentPath) {
-                link.classList.add("text-blue-950");
-                link.classList.remove("text-slate-400");
-              } else {
-                link.classList.add("text-slate-400");
-                link.classList.remove("text-blue-950");
-              }
-            });
-          })
-          .catch((err) => console.error("Error loading navbar:", err));
+fetch("./navbar.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("navbar").innerHTML = html;
+
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize the current path
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      // Resolve relative href to absolute path
+      const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname.replace(/\/$/, "");
+
+      // Compare resolved link path with the current path
+      if (link.id !== "sayHello" && linkPath === currentPath) {
+        link.classList.add("text-blue-950");
+        link.classList.remove("text-slate-400");
+      } else {
+        link.classList.add("text-slate-400");
+        link.classList.remove("text-blue-950");
+      }
+    });
+  })
+  .catch((err) => console.error("Error loading navbar:", err));
       </script>
     </header>
 
@@ -203,13 +204,13 @@
    
     <div class="mix-blend-multiply" id="footer"></div>
     <script>
-      fetch("/src/footer.html")
+      fetch("./footer.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("footer").innerHTML = html;
         });
     </script>
-    <script src="/script.js?v=1.0"></script>
-    <script src="/navigation.js"></script>
+    <script src="./script.js?v=1.0"></script>
+    <script src="./navigation.js"></script>
 </body>
 </html>

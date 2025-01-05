@@ -4,14 +4,14 @@
 <base href="/my-website/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="/src/output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
 </head>
 <body>
     <header class="font-ivy">
       <div id="navbar"></div>
       <script>
-        fetch("./src/navbar.html")
+        fetch("/src/navbar.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("navbar").innerHTML = html;

@@ -11,7 +11,7 @@
     <header class="text-gray-600 font-ivy mix-blend-multiply">
       <div id="navbar"></div>
       <script>
-        fetch("/src/navbar.html")
+        fetch("./src/navbar.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("navbar").innerHTML = html;

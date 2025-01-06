@@ -7,34 +7,36 @@
   <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
 </head>
 <body >
-    <header class="text-gray-600 font-ivy mix-blend-multiply">
-      <div id="navbar"></div>
-      <script>
-fetch("../navbar.html")
-  .then((response) => response.text())
-  .then((html) => {
-    document.getElementById("navbar").innerHTML = html;
-
-    const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize the current path
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    navLinks.forEach((link) => {
-      // Resolve relative href to absolute path
-      const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname.replace(/\/$/, "");
-
-      // Compare resolved link path with the current path
-      if (link.id !== "sayHello" && linkPath === currentPath) {
-        link.classList.add("text-blue-950");
-        link.classList.remove("text-slate-400");
-      } else {
-        link.classList.add("text-slate-400");
-        link.classList.remove("text-blue-950");
-      }
-    });
-  })
-  .catch((err) => console.error("Error loading navbar:", err));
-      </script>
-      </header>
+  <header class="text-gray-600 font-ivy">
+    <nav class="mx-auto flex p-8 flex-row">
+      <a
+        class="flex title-font font-medium items-center mb-4 md:mb-0"
+        href="../index.html"
+      >
+        <div
+          class="size-24 bg-[url('./images/bradenpate.svg')] hover:bg-[url('./images/bradenpate.svg')] bg-cover"
+          alt="Braden Pate Avatar"
+        ></div>
+      </a>
+      <ul class="flex flex-col flex-grow sm:flex-row flex-wrap items-end sm:items-start sm:justify-end text-3xl font-bold">
+        <li>
+          <a href="../index.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            Work
+          </a>
+        </li>
+        <li>
+          <a href="../about.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#" id="sayHello" class="mr-5 text-slate-400 hover:text-blue-950 transition-all">
+            Say hello
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </header>
 <div class="flex p-8 animate-fadeIn">
   <div class="max-w-16"><img src="../images/work/mendix-refresh/client.svg"></img></div>
   <div class="grid-rows-2 pl-4"><p id="work-title" class="text-2xl font-bold text-slate-800 font-ivy">Mendix</p><p id="work-subtitle" class="font-ivy text-2xl font-bold text-slate-400">Maia: Mendix AI Assistance</p></div>

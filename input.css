@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Add custom styles below */
+@layer utilities {
+    #sayHello {
+      transition: all 0.3s ease;
+    }
+  }

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
+</head>
+<body >
+  <header class="text-gray-600 font-ivy">
+    <nav class="mx-auto flex p-8 flex-row">
+      <a
+        class="flex title-font font-medium items-center mb-4 md:mb-0"
+        href="../index.html"
+      >
+        <div
+          class="size-24 bg-[url('./images/bradenpate-03.svg')] hover:bg-[url('./images/bradenpate.svg')] bg-cover"
+          alt="Braden Pate Avatar"
+        ></div>
+      </a>
+      <ul class="flex flex-col flex-grow sm:flex-row flex-wrap items-end sm:items-start sm:justify-end text-3xl font-bold">
+        <li>
+          <a href="../index.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            Work
+          </a>
+        </li>
+        <li>
+          <a href="../about.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#" id="sayHello" class="mr-5 text-slate-400 hover:text-blue-950 transition-all">
+            Say hello
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+<div class="flex p-8 animate-fadeIn">
+  <div class="max-w-16"><img src="../images/work/ef/client.svg"></img></div>
+  <div class="grid-rows-2 pl-4"><p id="work-title" class="text-2xl font-bold text-slate-800 font-ivy">EF Ultimate Break</p><p id="work-subtitle" class="font-ivy text-2xl font-bold text-slate-400">Web Design and Branding</p></div>
+</div>
+    <div class="mx-auto p-8 animate-fadeIn">
+    <p class="font-ivy font-bold text-4xl text-slate-900 pb-16 sm:mr-28">EF Ultimate Break is on a mission to become the go-to travel company for young Americans. As the design lead, I guided a small, agile team of in-house designers, creating everything from the website to trip itineraries, Facebook ads, and email campaigns. My work heavily emphasized user experience, ensuring travelers could seamlessly find, book, and manage their trips through our website, blending creativity with functionality to support the e-commerce journey.</p>
+</div>
+<div class="mx-auto p-8">
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-01@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-02@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-03@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-04@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-05@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-06@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-07@2x.png"></img>
+  <img class="pb-8 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/ef/image-08@2x.png"></img>
+</div>
+<div id="credits" class="mx-auto p-8 mb-6 sm:grid gap-14 sm:grid-cols-5">
+  <div class="row-start-1 pb-8 col-start-1">
+    <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+      Credits<br/>
+</div>
+    <div class="row-start-1 pb-8 col-start-2">
+    <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+      Design Production<br/>
+      <span class=" text-slate-400">
+        Sky Erikson<br/>
+  </span>
+      </p>
+      </div>
+      <div class="row-start-1 pb-8 col-start-3">
+        <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+          Copy<br/>
+          <span class=" text-slate-400">
+            Michael Ackerson<br/>
+            Kevin McGraw<br/>
+      </span>
+          </p>
+          </div>
+          </div>
+
+          <div id="next-project-placeholder"></div>
+          
+<div id="footer"></div>
+<script>
+  fetch("../footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
+<script src="../script.js?v=1.0"></script>
+<script src="../navigation.js"></script>
+</body>
+</html>

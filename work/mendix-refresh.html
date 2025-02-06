@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
+</head>
+<body >
+  <header class="text-gray-600 font-ivy">
+    <nav class="mx-auto flex p-8 flex-row">
+      <a
+        class="flex title-font font-medium items-center mb-4 md:mb-0"
+        href="../index.html"
+      >
+        <div
+          class="size-24 bg-[url('./images/bradenpate.svg')] hover:bg-[url('./images/bradenpate.svg')] bg-cover"
+          alt="Braden Pate Avatar"
+        ></div>
+      </a>
+      <ul class="flex flex-col flex-grow sm:flex-row flex-wrap items-end sm:items-start sm:justify-end text-3xl font-bold">
+        <li>
+          <a href="../index.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            Work
+          </a>
+        </li>
+        <li>
+          <a href="../about.html" class="nav-link mr-5 hover:text-blue-950 transition-all">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#" id="sayHello" class="mr-5 text-slate-400 hover:text-blue-950 transition-all">
+            Say hello
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+<div class="flex p-8 animate-fadeIn">
+  <div class="max-w-16"><img src="../images/work/mendix-refresh/client.svg"></img></div>
+  <div class="grid-rows-2 pl-4"><p id="work-title" class="text-2xl font-bold text-slate-800 font-ivy">Mendix</p><p id="work-subtitle" class="font-ivy text-2xl font-bold text-slate-400">Brand Refresh</p></div>
+</div>
+    <div class="mx-auto p-8 animate-fadeIn">
+    <p class="font-ivy font-bold text-4xl text-slate-900 pb-16 sm:mr-28">Mendix embarked on an ambitious journey to refresh its brand, coinciding with the 10<sup class="text-xl">th</sup> major release of our platform. This initiative was designed to modernize our brand identity, aligning it with our new mission, vision, and values. By focusing on turning ideas into outcomes, we sought to evolve our visual brand expression, generating excitement and engagement among our audience.
+    </p>
+</div>
+<div class="mx-auto p-8 sm:grid sm:grid-cols-2 sm:gap-8 auto-rows-min">
+  <div class="row-start-1 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-01.png"></img></div>
+  <div class="row-start-2"><video autoplay muted loop class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll">
+    <source src="../images/work/mendix-refresh/mendix-homepage.mp4" type="video/mp4" />
+  </video></div>
+  <div class="row-start-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-03.png"></img></div>
+  <div class="row-start-3 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-04.png"></img></div>
+  <div class="row-start-4 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-05.png"></img></div>
+  <div class="row-start-5"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-06.png"></img></div>
+  <div class="row-start-5"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-07.png"></img></div>
+  <div class="row-start-6 col-span-2"><img class="pb-8 sm:pb-0 opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="../images/work/mendix-refresh/image-08.png"></img></div>
+</div>
+
+<div id="credits" class="mx-auto p-8 mb-6 sm:grid gap-14 sm:grid-cols-5">
+  <div class="row-start-1 pb-8 col-start-1">
+    <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+      Credits<br/>
+</div>
+    <div class="row-start-1 pb-8 col-start-2">
+    <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+      Illustrations<br/>
+      <span class=" text-slate-400">
+        Blake Haake<br/>
+  </span>
+      </p>
+      </div>
+      <div class="row-start-1 pb-8 col-start-3">
+        <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+          Icons<br/>
+          <span class=" text-slate-400">
+            Syara de Roo<br/>
+      </span>
+          </p>
+          </div>
+          <div class="row-start-1 pb-8 col-start-4">
+            <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+              Animation<br/>
+              <span class=" text-slate-400">
+                Metehan Korkmazel<br/>
+          </span>
+              </p>
+              </div>
+              <div class="row-start-1 pb-4 col-start-5">
+                <p class="font-ivy font-bold text-2xl text-slate-900 transitionable mix-blend-multiply">
+                  3D<br/>
+                  <span class=" text-slate-400">
+                    Evan Willard<br/>
+              </span>
+                  </p>
+                  </div>
+
+</div>
+<div id="next-project-placeholder"></div>
+<div id="footer"></div>
+<script>
+  fetch("../src/footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("footer").innerHTML = html;
+    });
+</script>
+<script src="../script.js?v=1.0"></script>
+<script src="../navigation.js"></script>
+</body>
+</html>

@@ -3,15 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname.replace(/\/$/, ""); // Normalize path
   const navLinks = document.querySelectorAll(".nav-link");
 
-  if (navLinks.length === 0) {
-    console.error("No nav links found. Ensure navbar.html is loaded first.");
-  }
-
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href").replace(/\/$/, "");
-    if (link.id !== "sayHello" && linkPath === currentPath) {
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+    if (linkPath === currentPath) {
       link.classList.add("text-blue-950");
       link.classList.remove("text-slate-400");
+      link.setAttribute("aria-current", "page");
     } else {
       link.classList.add("text-slate-400");
       link.classList.remove("text-blue-950");
@@ -20,25 +17,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate on Scroll
   const elements = document.querySelectorAll(".animate-on-scroll");
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("opacity-100", "scale-100");
-          entry.target.classList.remove("opacity-0", "scale-90");
-          observer.unobserve(entry.target); // Stop observing once animated
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-  elements.forEach((el) => observer.observe(el));
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    elements.forEach((el) => {
+      el.classList.add("opacity-100", "scale-100");
+      el.classList.remove("opacity-0", "scale-90");
+    });
+  } else {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "scale-100");
+            entry.target.classList.remove("opacity-0", "scale-90");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    elements.forEach((el) => observer.observe(el));
+  }
 
   // Copy Email
   const sayHelloLink = document.getElementById("sayHello");
   if (sayHelloLink) {
-    sayHelloLink.addEventListener("click", () => {
+    sayHelloLink.addEventListener("click", (event) => {
+      event.preventDefault();
       const email = "braden@bradenpate.com";
+      if (!navigator.clipboard?.writeText) {
+        window.location.href = `mailto:${email}`;
+        return;
+      }
       navigator.clipboard.writeText(email)
         .then(() => {
           sayHelloLink.textContent = "Email copied";
@@ -46,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
             sayHelloLink.textContent = "Say hello";
           }, 2000);
         })
-        .catch((err) => {
-          console.error("Failed to copy email: ", err);
+        .catch(() => {
+          window.location.href = `mailto:${email}`;
         });
     });
   }
@@ -75,7 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch the HTML template
     fetch("../next-project.html")
-      .then((response) => response.text())
+      .then((response) => {
+        if (!response.ok) throw new Error(`Next project template: ${response.status}`);
+        return response.text();
+      })
       .then((template) => {
         // Create a temporary element to parse the template
         const tempDiv = document.createElement("div");

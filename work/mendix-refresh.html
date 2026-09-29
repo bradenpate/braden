@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <title>Mendix Brand Refresh | Braden Pate</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../output.css" rel="stylesheet">
@@ -30,7 +31,7 @@
           </a>
         </li>
         <li>
-          <a href="#" id="sayHello" class="mr-5 text-slate-400 hover:text-blue-950 transition-all">
+          <a href="mailto:braden@bradenpate.com" id="sayHello" class="mr-5 text-slate-400 hover:text-blue-950 transition-all">
             Say hello
           </a>
         </li>
@@ -100,13 +101,12 @@
 <div id="next-project-placeholder"></div>
 <div id="footer"></div>
 <script>
-  fetch("../src/footer.html")
+  fetch("../footer.html")
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("footer").innerHTML = html;
     });
 </script>
 <script src="../script.js?v=1.0"></script>
-<script src="../navigation.js"></script>
 </body>
 </html>

@@ -672,8 +672,8 @@ video {
   grid-row-start: 9;
 }
 
-.m-8 {
-  margin: 2rem;
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-auto {
@@ -841,6 +841,26 @@ video {
   background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[url\(\'\.\/images\/bradenpate-02\.svg\'\)\] {
+  background-image: url('./images/bradenpate-02.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bradenpate-03\.svg\'\)\] {
+  background-image: url('./images/bradenpate-03.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bradenpate-04\.svg\'\)\] {
+  background-image: url('./images/bradenpate-04.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bradenpate-05\.svg\'\)\] {
+  background-image: url('./images/bradenpate-05.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bradenpate-06\.svg\'\)\] {
+  background-image: url('./images/bradenpate-06.svg');
+}
+
 .bg-\[url\(\'\.\/images\/bradenpate\.svg\'\)\] {
   background-image: url('./images/bradenpate.svg');
 }
@@ -849,12 +869,16 @@ video {
   background-size: cover;
 }
 
-.p-16 {
-  padding: 4rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-8 {
   padding: 2rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pb-16 {
@@ -910,11 +934,6 @@ video {
 
 .text-5xl {
   font-size: 3rem;
-  line-height: 1;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -1029,6 +1048,10 @@ video {
     float: right;
   }
 
+  .sm\:m-8 {
+    margin: 2rem;
+  }
+
   .sm\:mr-28 {
     margin-right: 7rem;
   }
@@ -1078,13 +1101,40 @@ video {
          column-gap: 8rem;
   }
 
+  .sm\:p-16 {
+    padding: 4rem;
+  }
+
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+
   .sm\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .sm\:pb-24 {
+    padding-bottom: 6rem;
   }
 
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .sm\:text-7xl {

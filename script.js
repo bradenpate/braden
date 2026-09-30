@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Copy Email
   const sayHelloLink = document.getElementById("sayHello");
   if (sayHelloLink) {
-    sayHelloLink.addEventListener("click", () => {
+    sayHelloLink.addEventListener("click", (event) => {
+      event.preventDefault();
       const email = "braden@bradenpate.com";
       navigator.clipboard.writeText(email)
         .then(() => {

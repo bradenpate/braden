@@ -6,8 +6,17 @@
   <title>About — Braden Pate</title>
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fvi1zio.css">
+  <style>
+    @media (max-width: 639px) {
+      .about-intro, .about-dog-photo, .about-content > .border-t { display: none; }
+      .about-content > .col-start-1:not(.border-t):not(.about-interest):not(.row-start-2) { margin-top: 3.5rem; }
+      .about-content > .about-interest { margin-top: 2rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="./interest-hover.css">
 </head>
-<body class="bg-sky-100">
+<body class="bg-white">
+    <div class="interest-backdrop" aria-hidden="true"><img alt="" class="interest-backdrop-image"></div>
     <header class="text-gray-600 font-ivy">
       <nav class="mix-blend-multiply mx-auto flex p-8 flex-row">
         <a
@@ -46,7 +55,7 @@
       </div>
 
       <!-- Text Section -->
-      <div class="row-start-1 col-start-3 col-span-3">
+      <div class="about-intro row-start-1 col-start-3 col-span-3">
         <p class="font-ivy font-bold text-5xl sm:text-7xl text-slate-900 transitionable mix-blend-multiply pb-6">
           About
         </p>
@@ -56,17 +65,18 @@
       </div>
 
       <!-- Right Image -->
-      <div class="row-start-2 col-start-4 col-span-2 self-end">
+      <div class="about-dog-photo row-start-2 col-start-4 col-span-2 self-end">
         <img class="rounded-lg sm:w-1/2 sm:float-right opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/about/image-02.png" alt="Image 02">
       </div>
     </div>
 
-    <div class="mx-auto p-8 sm:grid sm:gap-14 sm:grid-cols-2">
+    <div class="about-content mx-auto p-8 sm:grid sm:gap-14 sm:grid-cols-2">
       <div class="row-start-1 col-span-2 border-t border-gray-300 w-full"></div>
       <div class="row-start-2 col-start-1">
         <p class="font-ivy font-bold text-3xl sm:text-5xl text-slate-900 transitionable mix-blend-multiply pb-6">
           About me
-        </p></div>
+        </p>
+</div>
         <div class="row-start-2 col-start-2">
         <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
           With a foundation in graphic design and over a decade of experience shaping visual identities, I’ve honed my ability to
@@ -119,72 +129,43 @@
                       Get a taste of who I am through what inspires and fuels my creativity.
                       </p>
                       </div>
-                      <div class="row-start-9 col-start-1">
-                        <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                          Film<br/>
-                          <span class="font-extralight">Halloween, John Carpenter<br/>
-                            It’s Complicated, Nancy Meyers<br/>
-                            Midnight in Paris, Woody Allen<br/></span></div>
-                        <div class="row-start-9 col-start-2">
-                        <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                          TV<br/>
-                          <span class="font-extralight">30 Rock, Tina Fey<br/>
-                            Frasier, David Angell, Peter Casey, and David Lee<br/>
-                            Buffy the Vampire Slayer, Joss Whedon<br/>
-                          Industry, Mickey Down and Konrad Kay</span>
-                          </p>
-                          </div>
-
-                          <div class="row-start-10 col-start-1">
-                            <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                              Books<br/>
-                              <span class="font-extralight">The Hours, Michael Cunningham<br/>
-                                Project Hail Mary, Andy Weir<br/>
-                                Dearie: The Remarkable Life of Julia Child, Bob Spitz</span></div>
-                            <div class="row-start-10 col-start-2">
-                            <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                              Comics<br/>
-                              <span class="font-extralight">The Dark Knight, Frank Miller<br/>
-                                Maus, Art Spiegelman<br/>
-                                Ghost World, Daniel Clowes<br/>
-                                Watchmen, Alan Moore</span>
-                              </p>
-                              </div>
-
-                              <div class="row-start-11 col-start-1">
-                                <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                                  Albums<br/>
-                                  <span class="font-extralight">The Long Way Around, The Chicks<br/>
-                                    Rumors, Fleetwood Mac<br/>
-                                    Tapestry, Carole King</span></div>
-                                <div class="row-start-11 col-start-2">
-                                <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                                  Songs<br/>
-                                  <span class="font-extralight">Ol’ Man River, Jerome Kern and Oscar Hammerstein II<br/>
-                                    Rainbow, Kacey Musgraves<br/>
-                                    Nick of Time, Bonnie Raitt
-                                  </span>
-                                  </p>
-                                  </div>
-
-                                  <div class="row-start-12 col-start-1">
-                                    <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                                      Games<br/>
-                                      <span class="font-extralight">Control, Remedy Entertainment<br/>
-                                        Breath of the Wild, Nintendo<br/>
-                                        Astro Bot, Japan Studio’s ASOBI Team</span></div>
-                                    <div class="row-start-12 col-start-2">
-                                    <p class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 transitionable mix-blend-multiply">
-                                      Paintings<br/>
-                                      <span class="font-extralight">Nanny and Rose, Scott Prior<br/>
-                                        Our Banner in the Sky, Frederick Edwin Church
-                                        Summer Scene (Bathers), Frédéric Bazille</span>
-                                      </p>
-                                      </div>
+<section class="about-interest row-start-9 col-start-1" aria-labelledby="interest-film">
+        <h2 id="interest-film" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Film</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="0" aria-pressed="false">Halloween, John Carpenter</button></li><li><button type="button" class="interest-trigger" data-interest="1" aria-pressed="false">It’s Complicated, Nancy Meyers</button></li><li><button type="button" class="interest-trigger" data-interest="2" aria-pressed="false">Midnight in Paris, Woody Allen</button></li></ul>
+      </section>
+<section class="about-interest row-start-9 col-start-2" aria-labelledby="interest-tv">
+        <h2 id="interest-tv" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">TV</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="3" aria-pressed="false">30 Rock, Tina Fey</button></li><li><button type="button" class="interest-trigger" data-interest="4" aria-pressed="false">Frasier, David Angell, Peter Casey, and David Lee</button></li><li><button type="button" class="interest-trigger" data-interest="5" aria-pressed="false">Buffy the Vampire Slayer, Joss Whedon</button></li><li><button type="button" class="interest-trigger" data-interest="6" aria-pressed="false">Industry, Mickey Down and Konrad Kay</button></li></ul>
+      </section>
+<section class="about-interest row-start-10 col-start-1" aria-labelledby="interest-books">
+        <h2 id="interest-books" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Books</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="7" aria-pressed="false">The Hours, Michael Cunningham</button></li><li><button type="button" class="interest-trigger" data-interest="8" aria-pressed="false">Project Hail Mary, Andy Weir</button></li><li><button type="button" class="interest-trigger" data-interest="9" aria-pressed="false">Dearie: The Remarkable Life of Julia Child, Bob Spitz</button></li></ul>
+      </section>
+<section class="about-interest row-start-10 col-start-2" aria-labelledby="interest-comics">
+        <h2 id="interest-comics" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Comics</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="10" aria-pressed="false">The Dark Knight, Frank Miller</button></li><li><button type="button" class="interest-trigger" data-interest="11" aria-pressed="false">Maus, Art Spiegelman</button></li><li><button type="button" class="interest-trigger" data-interest="12" aria-pressed="false">Ghost World, Daniel Clowes</button></li><li><button type="button" class="interest-trigger" data-interest="13" aria-pressed="false">Watchmen, Alan Moore</button></li></ul>
+      </section>
+<section class="about-interest row-start-11 col-start-1" aria-labelledby="interest-albums">
+        <h2 id="interest-albums" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Albums</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="14" aria-pressed="false">The Long Way Around, The Chicks</button></li><li><button type="button" class="interest-trigger" data-interest="15" aria-pressed="false">Rumors, Fleetwood Mac</button></li><li><button type="button" class="interest-trigger" data-interest="16" aria-pressed="false">Tapestry, Carole King</button></li></ul>
+      </section>
+<section class="about-interest row-start-11 col-start-2" aria-labelledby="interest-songs">
+        <h2 id="interest-songs" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Songs</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="17" aria-pressed="false">Ol’ Man River, Jerome Kern and Oscar Hammerstein II</button></li><li><button type="button" class="interest-trigger" data-interest="18" aria-pressed="false">Rainbow, Kacey Musgraves</button></li><li><button type="button" class="interest-trigger" data-interest="19" aria-pressed="false">Nick of Time, Bonnie Raitt</button></li></ul>
+      </section>
+<section class="about-interest row-start-12 col-start-1" aria-labelledby="interest-games">
+        <h2 id="interest-games" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Games</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="20" aria-pressed="false">Control, Remedy Entertainment</button></li><li><button type="button" class="interest-trigger" data-interest="21" aria-pressed="false">Breath of the Wild, Nintendo</button></li><li><button type="button" class="interest-trigger" data-interest="22" aria-pressed="false">Astro Bot, Japan Studio’s ASOBI Team</button></li></ul>
+      </section>
+<section class="about-interest row-start-12 col-start-2" aria-labelledby="interest-paintings">
+        <h2 id="interest-paintings" class="font-ivy font-bold text-xl sm:text-3xl text-slate-900 mix-blend-multiply">Paintings</h2>
+        <ul class="font-ivy font-extralight text-xl sm:text-3xl text-slate-900"><li><button type="button" class="interest-trigger" data-interest="23" aria-pressed="false">Nanny and Rose, Scott Prior</button></li><li><button type="button" class="interest-trigger" data-interest="24" aria-pressed="false">Our Banner in the Sky, Frederick Edwin Church</button></li><li><button type="button" class="interest-trigger" data-interest="25" aria-pressed="false">Summer Scene (Bathers), Frédéric Bazille</button></li></ul>
+      </section>
     <div class="row-start-13 col-span-2 pt-16 pb-16 mix-blend-multiply"><img class="rounded-lg opacity-0 transform scale-90 transition-all duration-700 ease-out animate-on-scroll" src="./images/about/characters.svg" alt="Image 01">
     </div></div>
     </div>
    
+
     <div class="mix-blend-multiply" id="footer"></div>
     <script>
       fetch("./footer.html")
@@ -193,6 +174,7 @@
           document.getElementById("footer").innerHTML = html;
         });
     </script>
-    <script src="./script.js?v=1.0"></script>
+    <script src="./script.js?v=1.1"></script>
+    <script src="./interest-hover.js"></script>
 </body>
 </html>

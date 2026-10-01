@@ -18,21 +18,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Animate on Scroll
-  const elements = document.querySelectorAll(".animate-on-scroll");
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
+  // Gentle, one-time reveals for media and content across every page.
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const style = document.createElement('style');
+  style.textContent = `
+    .scroll-reveal { transition: opacity 550ms ease, transform 550ms ease; }
+    .scroll-reveal.is-waiting { opacity: 0; transform: translateY(12px); }
+    .scroll-reveal.is-shown { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal, .animate-on-scroll, .animate-fadeIn {
+        opacity: 1 !important; transform: none !important;
+        transition: none !important; animation: none !important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+  const elements = [...document.querySelectorAll('.animate-on-scroll, body > div p, body > div h1, body > div h2, body > div h3, .about-interest')]
+    .filter(element => !element.closest('header, #footer, .interest-backdrop') &&
+      !element.parentElement.closest('.animate-on-scroll, .about-interest'));
+  const reveal = element => {
+    element.classList.remove('opacity-0', 'scale-90', 'is-waiting');
+    element.classList.add('opacity-100', 'scale-100', 'is-shown');
+  };
+  let revealObserver;
+  if (!motion.matches && 'IntersectionObserver' in window) {
+    revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("opacity-100", "scale-100");
-          entry.target.classList.remove("opacity-0", "scale-90");
-          observer.unobserve(entry.target); // Stop observing once animated
+          reveal(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
-    },
-    { threshold: 0.1 }
-  );
-  elements.forEach((el) => observer.observe(el));
+    }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+    elements.forEach(element => {
+      element.classList.remove('animate-fadeIn', 'opacity-0', 'scale-90');
+      element.classList.add('scroll-reveal');
+      // Keep initial content visible; animate content as it arrives during scrolling.
+      if (element.getBoundingClientRect().top < window.innerHeight) reveal(element);
+      else { element.classList.add('is-waiting'); revealObserver.observe(element); }
+    });
+  } else elements.forEach(reveal);
+  motion.addEventListener('change', () => {
+    if (motion.matches) { revealObserver?.disconnect(); elements.forEach(reveal); }
+  });
 
   // Copy Email
   const sayHelloLink = document.getElementById("sayHello");

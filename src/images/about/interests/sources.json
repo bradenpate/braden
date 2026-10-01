@@ -1,0 +1,225 @@
+[
+  {
+    "category": "Film",
+    "label": "Halloween, John Carpenter",
+    "reference_title": "Halloween (1978 film)",
+    "source": "https://en.wikipedia.org/wiki/Halloween_(1978_film)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/af/Halloween_%281978%29_theatrical_poster.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/a/af/Halloween_%281978%29_theatrical_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/00.webp"
+  },
+  {
+    "category": "Film",
+    "label": "It’s Complicated, Nancy Meyers",
+    "reference_title": "It's Complicated (film)",
+    "source": "https://www.universalpicturesathome.com/movies/its-complicated",
+    "image": "https://images.contentstack.io/v3/assets/blt13adb7e2033fcee5/bltee4703f700662230/691c85079feda6a96630d6d4/ItsComplicated_Poster_2000x3000_uaa.jpg?width=1200",
+    "original": "https://upload.wikimedia.org/wikipedia/en/e/ee/Its_complicated_ver2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/01.webp"
+  },
+  {
+    "category": "Film",
+    "label": "Midnight in Paris, Woody Allen",
+    "reference_title": "Midnight in Paris",
+    "source": "https://www.themoviedb.org/movie/59436-midnight-in-paris",
+    "image": "https://media.themoviedb.org/t/p/w500/yaZ00d395bYHvmUwR0a61wU0CYo.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/02.webp"
+  },
+  {
+    "category": "TV",
+    "label": "30 Rock, Tina Fey",
+    "reference_title": "30 Rock",
+    "source": "https://www.tvmaze.com/shows/537/30-rock",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/467/1167896.jpg",
+    "original": null,
+    "local_image": "./images/about/interests/03-poster.webp"
+  },
+  {
+    "category": "TV",
+    "label": "Frasier, David Angell, Peter Casey, and David Lee",
+    "reference_title": "Frasier",
+    "source": "https://www.tvmaze.com/shows/540/frasier",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/611/1528088.jpg",
+    "original": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Frasier_title_logo.svg/250px-Frasier_title_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "local_image": "./images/about/interests/04-poster.webp"
+  },
+  {
+    "category": "TV",
+    "label": "Buffy the Vampire Slayer, Joss Whedon",
+    "reference_title": "Buffy the Vampire Slayer",
+    "source": "https://www.tvmaze.com/shows/427/buffy-the-vampire-slayer",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/2/7490.jpg",
+    "original": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Buffy_the_vampire_slayer.svg/250px-Buffy_the_vampire_slayer.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "local_image": "./images/about/interests/05-poster.webp"
+  },
+  {
+    "category": "TV",
+    "label": "Industry, Mickey Down and Konrad Kay",
+    "reference_title": "Industry (TV series)",
+    "source": "https://www.tvmaze.com/shows/45501/industry",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/608/1521293.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/c/c2/Industry_title.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/06-poster.webp"
+  },
+  {
+    "category": "Books",
+    "label": "The Hours, Michael Cunningham",
+    "reference_title": "The Hours (novel)",
+    "source": "https://en.wikipedia.org/wiki/The_Hours_(novel)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8d/The_Hours_novella.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/8/8d/The_Hours_novella.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/07.webp"
+  },
+  {
+    "category": "Books",
+    "label": "Project Hail Mary, Andy Weir",
+    "reference_title": "Project Hail Mary",
+    "source": "https://en.wikipedia.org/wiki/Project_Hail_Mary",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/Project_Hail_Mary%2C_First_Edition_Cover_%282021%29.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/a/ad/Project_Hail_Mary%2C_First_Edition_Cover_%282021%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/08.webp"
+  },
+  {
+    "category": "Books",
+    "label": "Dearie: The Remarkable Life of Julia Child, Bob Spitz",
+    "reference_title": "Dearie: The Remarkable Life of Julia Child",
+    "source": "https://www.penguinrandomhouse.com/books/171249/dearie-by-bob-spitz/",
+    "image": "https://images4.penguinrandomhouse.com/cover/9780307473417",
+    "original": null,
+    "local_image": "./images/about/interests/09.webp"
+  },
+  {
+    "category": "Comics",
+    "label": "The Dark Knight, Frank Miller",
+    "reference_title": "The Dark Knight Returns",
+    "source": "https://en.wikipedia.org/wiki/The_Dark_Knight_Returns",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/b2/Batman_The_Dark_Knight_Returns_1_%28February_1986%29.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/b/b2/Batman_The_Dark_Knight_Returns_1_%28February_1986%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/10.webp"
+  },
+  {
+    "category": "Comics",
+    "label": "Maus, Art Spiegelman",
+    "reference_title": "Maus",
+    "source": "https://en.wikipedia.org/wiki/Maus",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/7d/Maus_%28volume_1%29_cover.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/7/7d/Maus_%28volume_1%29_cover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/11.webp"
+  },
+  {
+    "category": "Comics",
+    "label": "Ghost World, Daniel Clowes",
+    "reference_title": "Ghost World",
+    "source": "https://en.wikipedia.org/wiki/Ghost_World_(comics)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/b9/Ghost_world.JPG",
+    "original": null,
+    "local_image": "./images/about/interests/12.webp"
+  },
+  {
+    "category": "Comics",
+    "label": "Watchmen, Alan Moore",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a2/Watchmen%2C_issue_1.jpg",
+    "source": "https://en.wikipedia.org/wiki/Watchmen",
+    "reference_title": "Watchmen",
+    "local_image": "./images/about/interests/13.webp"
+  },
+  {
+    "category": "Albums",
+    "label": "The Long Way Around, The Chicks",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/TakingtheLongWay.jpg",
+    "source": "https://en.wikipedia.org/wiki/Taking_the_Long_Way",
+    "reference_title": "Taking the Long Way",
+    "local_image": "./images/about/interests/14.webp"
+  },
+  {
+    "category": "Albums",
+    "label": "Rumors, Fleetwood Mac",
+    "reference_title": "Rumours (album)",
+    "source": "https://en.wikipedia.org/wiki/Rumours_(album)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG",
+    "original": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/15.webp"
+  },
+  {
+    "category": "Albums",
+    "label": "Tapestry, Carole King",
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/52/Carole_King_-_Tapestry.jpg",
+    "source": "https://en.wikipedia.org/wiki/Tapestry_%28Carole_King_album%29",
+    "reference_title": "Tapestry (Carole King album)",
+    "local_image": "./images/about/interests/16.webp"
+  },
+  {
+    "category": "Songs",
+    "label": "Ol’ Man River, Jerome Kern and Oscar Hammerstein II",
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/02/Showboat1951film.jpg",
+    "source": "https://en.wikipedia.org/wiki/Show_Boat_%281951_film%29",
+    "reference_title": "Show Boat (1951 film)",
+    "local_image": "./images/about/interests/17.webp"
+  },
+  {
+    "category": "Songs",
+    "label": "Rainbow, Kacey Musgraves",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/71/KaceyMusgravesRainbow.jpg",
+    "source": "https://en.wikipedia.org/wiki/Rainbow_%28Kacey_Musgraves_song%29",
+    "reference_title": "Rainbow (Kacey Musgraves song)",
+    "local_image": "./images/about/interests/18.webp"
+  },
+  {
+    "category": "Songs",
+    "label": "Nick of Time, Bonnie Raitt",
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/06/Bonnie_Raitt_-_Nick_of_Time.png",
+    "source": "https://en.wikipedia.org/wiki/Nick_of_Time_%28album%29",
+    "reference_title": "Nick of Time (album)",
+    "local_image": "./images/about/interests/19.webp"
+  },
+  {
+    "category": "Games",
+    "label": "Control, Remedy Entertainment",
+    "reference_title": "Control (video game)",
+    "source": "https://en.wikipedia.org/wiki/Control_(video_game)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e5/Control_game_cover_art.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/e/e5/Control_game_cover_art.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/20.webp"
+  },
+  {
+    "category": "Games",
+    "label": "Breath of the Wild, Nintendo",
+    "reference_title": "The Legend of Zelda: Breath of the Wild",
+    "source": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Breath_of_the_Wild",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "local_image": "./images/about/interests/21.webp"
+  },
+  {
+    "category": "Games",
+    "label": "Astro Bot, Japan Studio’s ASOBI Team",
+    "image": "https://image.api.playstation.com/vulcan/img/rnd/202010/2716/XctlNDbp9eKmFiIR6JBuhKh4.png",
+    "source": "https://www.playstation.com/en-us/games/astro-bot-rescue-mission/",
+    "reference_title": "Astro Bot Rescue Mission",
+    "local_image": "./images/about/interests/22.webp"
+  },
+  {
+    "category": "Paintings",
+    "label": "Nanny and Rose, Scott Prior",
+    "image": "https://customprints.mfa.org/vitruvius/render/1200/479258.jpg",
+    "source": "https://customprints.mfa.org/detail/479258/prior-nanny-and-rose-1983",
+    "reference_title": "https://customprints.mfa.org/detail/479258/prior-nanny-and-rose-1983",
+    "local_image": "./images/about/interests/23.webp"
+  },
+  {
+    "category": "Paintings",
+    "label": "Our Banner in the Sky, Frederick Edwin Church",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Our_Banner_in_the_Sky_by_Frederic_Edwin_Church.jpg/1280px-Our_Banner_in_the_Sky_by_Frederic_Edwin_Church.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Our_Banner_in_the_Sky_by_Frederic_Edwin_Church.jpg",
+    "local_image": "./images/about/interests/24.webp"
+  },
+  {
+    "category": "Paintings",
+    "label": "Summer Scene (Bathers), Frédéric Bazille",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Bazille%2C_Fr%C3%A9d%C3%A9ric_~_Summer_Scene%2C_1869%2C_Oil_on_canvas_Fogg_Art_Museum%2C_Cambridge%2C_Massachusetts.jpg/1280px-Bazille%2C_Fr%C3%A9d%C3%A9ric_~_Summer_Scene%2C_1869%2C_Oil_on_canvas_Fogg_Art_Museum%2C_Cambridge%2C_Massachusetts.jpg",
+    "source": "https://en.wikipedia.org/wiki/Summer_Scene",
+    "reference_title": "Summer Scene",
+    "local_image": "./images/about/interests/25.webp"
+  }
+]

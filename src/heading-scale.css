@@ -1,0 +1,12 @@
+/* One title scale across the homepage, About, and project write-ups. */
+:root{--content-heading-size:28px}
+body[data-direction="3"] .project h3,
+body[data-direction="3"] .page-content .page-heading h1,
+body .work-page-title{
+  font-size:var(--content-heading-size);
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:-.015em;
+  text-wrap:balance;
+}
+@media(max-width:700px){:root{--content-heading-size:24px}}

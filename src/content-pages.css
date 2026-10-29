@@ -1,0 +1,20 @@
+/* The same rail stays in place; each page owns only the content column. */
+
+.rail-title .soft{color:var(--slate)}
+.page-content{min-width:0}.page-heading{margin:0 0 38px}.page-content .page-heading h1{font-size:clamp(40px,4.3vw,64px);font-weight:700;line-height:1.12;letter-spacing:-.02em;text-wrap:balance;margin:0 0 22px;max-width:900px}
+.page-heading .client-mark{width:64px;max-height:38px;object-fit:contain;object-position:left;margin-bottom:22px}.page-content p{line-height:1.6;text-wrap:pretty}.page-lead{font-size:22px;color:var(--muted);max-width:44em;margin:0}
+.about-photos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);gap:28px;align-items:end;margin-bottom:52px}.about-photos img{width:100%;height:auto}.about-photos img:first-child{max-height:560px;object-fit:cover;object-position:50% 35%}
+.about-story{font-size:20px;max-width:42em}.about-story p{margin:0 0 26px}.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin:60px 0 72px}.page-content h2{font-size:28px;line-height:1.2;letter-spacing:-.015em;margin:0 0 22px}.about-facts h2{font-size:22px}.about-facts ul,.interests-grid ul{list-style:none;margin:0;padding:0}.about-facts li,.about-facts p{font-size:19px;line-height:1.6;margin:0}.about-facts .secondary{color:var(--muted)}
+.interests-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px 48px;font-size:18px;line-height:1.55;margin-top:34px}.about-interest h3{font-size:20px;margin:0 0 12px}.interests-grid li+li{margin-top:8px}.interest-trigger{font-size:inherit}.characters{margin-top:64px;width:100%}
+.case-gallery{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px}.case-gallery figure{margin:0;min-width:0}.case-gallery .full{grid-column:1/-1}.case-gallery img,.case-gallery video{width:100%;height:auto;display:block}.case-gallery video{background:#0f172a}
+.credits{margin-top:64px}.credits-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}.credits h3{font-size:17px;margin:0 0 10px}.credits p{color:var(--muted);font-size:18px;margin:0}.project-return{display:inline-block;margin-top:58px;font-size:20px;font-weight:700;text-underline-offset:5px}.project-return:hover{text-decoration:underline}
+
+@media(max-width:1000px){.about-photos{gap:20px}.about-story{font-size:18px}.page-lead{font-size:20px}.interests-grid{gap:30px;font-size:17px}.about-facts{gap:30px}.credits-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.page-content{margin-top:56px}.page-heading{margin-bottom:28px}.page-content .page-heading h1{font-size:40px}.page-lead{font-size:19px}.about-photos{gap:16px;margin-bottom:34px;grid-template-columns:1fr .65fr}.about-story{font-size:18px}.about-facts{grid-template-columns:1fr;gap:32px;margin:40px 0 48px}.interests-grid{grid-template-columns:1fr;gap:30px;font-size:18px}.case-gallery{grid-template-columns:1fr;gap:20px}.case-gallery .full{grid-column:auto}.credits{margin-top:42px}.credits-grid{grid-template-columns:1fr;gap:24px}.project-return{margin-top:40px}}
+
+/* A case-study title introduces the work without competing with the rail. */
+body[data-active="work"] .page-content .page-heading h1{font-size:clamp(32px,3.2vw,44px);line-height:1.18;letter-spacing:-.015em;max-width:900px;margin-bottom:20px}
+body[data-active="work"] .page-lead{font-size:20px;max-width:44em}
+@media(max-width:700px){body[data-active="work"] .page-content .page-heading h1{font-size:32px}body[data-active="work"] .page-lead{font-size:18px}}
+
+.project-pagination{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:20px 32px;margin-top:58px;font-size:18px;line-height:1.5;font-weight:700}.project-pagination .project-return{margin-top:0;font-size:inherit}.project-next:hover{text-decoration:underline;text-underline-offset:5px}@media(max-width:700px){.project-pagination{margin-top:40px}}

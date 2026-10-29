@@ -91,3 +91,8 @@ body[data-direction="3"] .intro{top:70px}
  body[data-direction="3"] main{margin-top:24px}
  body[data-direction="3"] .intro{top:24px}
 }
+
+/* Hide project view controls on phones in either orientation. */
+@media (max-width:700px), (max-width:1000px) and (max-height:500px) and (pointer:coarse){
+ body[data-direction="3"] .work-controls{display:none}
+}

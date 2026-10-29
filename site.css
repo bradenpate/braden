@@ -85,3 +85,9 @@ body[data-direction="3"][data-work-view="tiles"] .project h3{margin:0 0 10px}
 
 /* The public site has no comparison bar above the layout. */
 body[data-direction="3"] .intro{top:70px}
+
+/* Give short landscape screens more room for the content. */
+@media (orientation:landscape) and (max-height:500px){
+ body[data-direction="3"] main{margin-top:24px}
+ body[data-direction="3"] .intro{top:24px}
+}

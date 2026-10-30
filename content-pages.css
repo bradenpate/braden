@@ -1,5 +1,11 @@
 /* The same rail stays in place; each page owns only the content column. */
 
+@media(max-width:700px){
+ body.content-page[data-direction="3"] .rail-brand{margin-bottom:0}
+ .stacked-rail-footer{margin:56px 0 0;padding:32px 0;border-top:1px solid #e2e8f0}
+ .stacked-rail-footer .rail-meta{position:static;width:auto;margin-top:28px}
+}
+
 .rail-title .soft{color:var(--slate)}
 .page-content{min-width:0}.page-heading{margin:0 0 38px}.page-content .page-heading h1{font-size:clamp(40px,4.3vw,64px);font-weight:700;line-height:1.12;letter-spacing:-.02em;text-wrap:balance;margin:0 0 22px;max-width:900px}
 .page-heading .client-mark{width:64px;max-height:38px;object-fit:contain;object-position:left;margin-bottom:22px}.page-content p{line-height:1.6;text-wrap:pretty}.page-lead{font-size:22px;color:var(--muted);max-width:44em;margin:0}

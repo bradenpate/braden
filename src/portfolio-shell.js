@@ -9,6 +9,23 @@
   if(rail){
     const root=document.body.dataset.root||'./';
     if(!rail.children.length)rail.innerHTML=railMarkup({root,active:document.body.dataset.active,home:rail.dataset.home==='true'});
+    if(document.body.classList.contains('content-page')){
+      const copy=rail.querySelector('.intro-copy');
+      const details=[...copy.querySelectorAll('.rail-summary,.rail-contact,.rail-meta')];
+      const footer=document.createElement('aside');
+      footer.className='stacked-rail-footer';
+      footer.setAttribute('aria-label','About Braden Pate');
+      footer.hidden=true;
+      rail.parentElement.append(footer);
+      const stacked=matchMedia('(max-width:700px)');
+      const arrangeDetails=()=>{
+        details.forEach(detail=>(stacked.matches?footer:copy).append(detail));
+        footer.hidden=!stacked.matches;
+        rail.setAttribute('aria-label',stacked.matches?'Site navigation':'About Braden Pate');
+      };
+      arrangeDetails();
+      stacked.addEventListener('change',arrangeDetails);
+    }
   }
   const videos=[...document.querySelectorAll('[data-motion-preview]')];
   if(videos.length){

@@ -23,3 +23,8 @@ body[data-active="work"] .page-lead{font-size:20px;max-width:44em}
 @media(max-width:700px){body[data-active="work"] .page-content .page-heading h1{font-size:32px}body[data-active="work"] .page-lead{font-size:18px}}
 
 .project-pagination{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:20px 32px;margin-top:58px;font-size:18px;line-height:1.5;font-weight:700}.project-pagination .project-return{margin-top:0;font-size:inherit}.project-next:hover{text-decoration:underline;text-underline-offset:5px}@media(max-width:700px){.project-pagination{margin-top:40px}}
+
+/* Match the fixed rail footer inset at the end of desktop content pages. */
+@media(min-width:701px) and (min-height:600px){
+ body.content-page[data-direction="3"] main{padding-bottom:var(--footer-inset)}
+}
